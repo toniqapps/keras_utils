@@ -10,6 +10,7 @@ Original file is located at
 from keras.datasets import cifar10
 from matplotlib import pyplot as plt
 from keras.utils import np_utils
+import numpy as np
 
 def get_cifar10_labels():
     return ['airplane','automobile','bird','cat','deer','dog','frog','horse','ship','truck']
