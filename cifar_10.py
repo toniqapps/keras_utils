@@ -1,3 +1,5 @@
+import os
+
 data_dir='/tmp/cifar-data/'
 
 # URL for the data-set on the internet.
