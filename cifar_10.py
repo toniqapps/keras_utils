@@ -368,7 +368,8 @@ class SubPolicy(object):
         if random.random() < self.p2: img = self.operation2(img, self.magnitude2)
         return img
         
-subPolicy = [CIFAR10Policy(0),CIFAR10Policy(1),CIFAR10Policy(2),CIFAR10Policy(3),CIFAR10Policy(4),
+def subPolicy():
+    return [CIFAR10Policy(0),CIFAR10Policy(1),CIFAR10Policy(2),CIFAR10Policy(3),CIFAR10Policy(4),
             CIFAR10Policy(5),CIFAR10Policy(6),CIFAR10Policy(7),CIFAR10Policy(8),CIFAR10Policy(9),
             CIFAR10Policy(10),CIFAR10Policy(11),CIFAR10Policy(12),CIFAR10Policy(13),CIFAR10Policy(14),
             CIFAR10Policy(15),CIFAR10Policy(16),CIFAR10Policy(17),CIFAR10Policy(18),CIFAR10Policy(19),
