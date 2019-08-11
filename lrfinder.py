@@ -182,7 +182,7 @@ class LRFinder:
                                  epochs=epochs,
                                  steps_per_epoch=steps_per_epoch,
                                  callbacks=[callback],
-                                 verbose=0,
+                                 verbose=1,
                                  **kw_fit)
 
         # Restore the weights to the state before model fitting
