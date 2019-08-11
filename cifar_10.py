@@ -1,3 +1,5 @@
+data_dir='/tmp/cifar-data/'
+
 # URL for the data-set on the internet.
 data_url = "https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz"
 
@@ -11,7 +13,7 @@ num_channels = 3
 img_size_flat = img_size * img_size * num_channels
 
 # Number of classes.
-num_classes = hparams.n_classes
+num_classes = 10
 
 ########################################################################
 # Various constants used to allocate arrays of the correct size.
@@ -58,7 +60,7 @@ def download(base_url, filename, download_dir):
         print(" Done!")
 
 
-def maybe_download_and_extract(url=data_url, download_dir=hparams.data_dir):
+def maybe_download_and_extract(url=data_url, download_dir=data_dir):
     """
     Download and extract the data if it doesn't already exist.
     Assumes the url is a tar-ball file.
@@ -111,7 +113,7 @@ def _get_file_path(filename=""):
     If filename=="" then return the directory of the files.
     """
 
-    return os.path.join(hparams.data_dir, "cifar-10-batches-py/", filename)
+    return os.path.join(data_dir, "cifar-10-batches-py/", filename)
 
 
 def _unpickle(filename):
