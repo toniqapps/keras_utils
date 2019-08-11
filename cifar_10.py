@@ -1,4 +1,10 @@
+import numpy as np
+import pickle
 import os
+import urllib
+import zipfile 
+import tarfile
+from six.moves import urllib
 
 data_dir='/tmp/cifar-data/'
 
