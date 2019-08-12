@@ -142,6 +142,7 @@ class OneCycleLR(Callback):
         logs = logs or {}
 
         self.epochs = self.params['epochs']
+	
         if not self.batch_size:
 		self.batch_size = self.params['batch_size']
         #self.samples = self.params['samples']
