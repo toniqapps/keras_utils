@@ -143,17 +143,13 @@ class OneCycleLR(Callback):
 
         self.epochs = self.params['epochs']
         self.batch_size = self.params['batch_size']
-        self.samples = self.params['samples']
+        #self.samples = self.params['samples']
         self.steps = self.params['steps']
 
         if self.steps is not None:
             self.num_iterations = self.epochs * self.steps
         else:
-            if (self.samples % self.batch_size) == 0:
-                remainder = 0
-            else:
-                remainder = 1
-            self.num_iterations = (self.epochs + remainder) * self.samples // self.batch_size
+            raise ValueError("steps is required")
 
         self.mid_cycle_id = int(self.num_iterations * ((1. - self.end_percentage)) / float(2))
 
