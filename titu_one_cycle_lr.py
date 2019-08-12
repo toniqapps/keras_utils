@@ -15,7 +15,7 @@ class OneCycleLR(Callback):
                  maximum_momentum=0.95,
                  minimum_momentum=0.85,
                  verbose=True,
-                 batch_size=512):
+                 batch_size=None):
         """ This callback implements a cyclical learning rate policy (CLR).
         This is a special case of Cyclic Learning Rates, where we have only 1 cycle.
         After the completion of 1 cycle, the learning rate will decrease rapidly to
